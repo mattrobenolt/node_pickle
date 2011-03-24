@@ -5,9 +5,13 @@
   
      var pickle = require('./lib/pickle');
      
-     pickle.dumps({hello: "world"}, function(data)
+     pickle.dumps({hello: "world"}, function(pickled)
      {
-       console.log(data);
+       console.log("pickled:", pickled);
+       pickle.loads(pickled, function(original)
+       {
+         console.log("original:", original);
+       });
      });
 
 ## License 
