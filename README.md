@@ -1,18 +1,21 @@
 # node_pickle
-  
-  A really, admittedly, lazy interface into Python for pickling/unpickling an object.
-  The interface mimics Python's pickle.dumps & pickle.loads.  
-  
-     var pickle = require('./lib/pickle');
-     
-     pickle.dumps({hello: "world"}, function(pickled)
-     {
-       console.log("pickled:", pickled);
-       pickle.loads(pickled, function(original)
-       {
-         console.log("original:", original);
-       });
-     });
+A really, admittedly, lazy interface into Python for pickling/unpickling an object.
+The interface mimics Python's pickle.dumps & pickle.loads.
+
+## Install
+`$ npm install pickle`
+
+## Usage
+```javascript
+var pickle = require('pickle');
+
+pickle.dumps({hello: "world"}, function(pickled) {
+  console.log("pickled:", pickled);
+  pickle.loads(pickled, function(original) {
+    console.log("original:", original);
+  });
+});
+```
 
 ## License 
 
